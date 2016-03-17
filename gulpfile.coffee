@@ -59,7 +59,7 @@ gulp.task 'create-new-tag', (cb) ->
 
 gulp.task 'release', (callback) ->
     cb = (error) ->
-        console.log(error.message) if err
+        console.log(error.message) if error
         callback(error)
     runSequence(
         'bump-version',
