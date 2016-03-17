@@ -36,12 +36,19 @@ gulp.task 'changelog', ->
         .pipe(conventionalChangelog(preset: 'angular'))
         .pipe(gulp.dest('./'))
 
-gulp.task 'bump-version', ->
-    # We hardcode the version change type to 'patch' but it may be a good idea to
-    # use minimist (https://www.npmjs.com/package/minimist) to determine with a
-    # command argument whether you are doing a 'major', 'minor' or a 'patch' change.
+gulp.task 'bump-version-patch', (importance) ->
     gulp.src('./package.json')
-        .pipe(bump(type: "patch").on('error', gutil.log))
+        .pipe(bump(type: 'patch').on('error', gutil.log))
+        .pipe(gulp.dest('./'))
+
+gulp.task 'bump-version-feature', (importance) ->
+    gulp.src('./package.json')
+        .pipe(bump(type: 'feature').on('error', gutil.log))
+        .pipe(gulp.dest('./'))
+
+gulp.task 'bump-version-release', (importance) ->
+    gulp.src('./package.json')
+        .pipe(bump(type: 'release').on('error', gutil.log))
         .pipe(gulp.dest('./'))
 
 gulp.task 'commit-changes', ->
@@ -57,15 +64,20 @@ gulp.task 'create-new-tag', (cb) ->
         return cb(error) if error
         git.push('origin', 'master', {args: '--tags'}, cb)
 
-gulp.task 'release', (callback) ->
+#gulp.task 'release', (importance, callback) ->
+increment = (importance, callback) ->
     cb = (error) ->
         console.log(error.message) if error
         callback(error)
     runSequence(
-        'bump-version',
+        'bump-version-' + importance,
         'changelog',
         'commit-changes',
         'push-changes',
         'create-new-tag',
         cb
     )
+
+gulp.task 'patch', increment('patch')
+gulp.task 'feature', increment('feature')
+gulp.task 'release', increment('release')
