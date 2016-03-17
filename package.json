@@ -1,0 +1,29 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larryosborn/sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larryosborn/sandbox/issues"
+  },
+  "homepage": "https://github.com/larryosborn/sandbox#readme",
+  "coffeelintConfig": "coffeelint.json",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-coffeelint": "^0.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
