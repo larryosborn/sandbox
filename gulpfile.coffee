@@ -75,7 +75,7 @@ increment = (importance, callback) ->
         'commit-changes',
         'push-changes',
         'create-new-tag',
-        cb
+        #cb
     )
 
 gulp.task 'patch', -> increment('patch')
