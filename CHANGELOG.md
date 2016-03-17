@@ -1,3 +1,9 @@
+<a name="1.0.8"></a>
+## [1.0.8](https://github.com/larryosborn/sandbox/compare/1.0.6...v1.0.8) (2016-03-17)
+
+
+
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/larryosborn/sandbox/compare/1.0.5...v1.0.7) (2016-03-17)
 
