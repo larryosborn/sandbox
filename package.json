@@ -1,6 +1,6 @@
 {
   "name": "sandbox",
-  "version": "6.1.1",
+  "version": "7.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "gulp-coffeelint": "^0.6.0",
     "gulp-conventional-changelog": "^1.1.0",
     "gulp-git": "^1.7.0",
+    "gulp-load-plugins": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
