@@ -1,3 +1,9 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/larryosborn/sandbox/compare/1.0.10...v4.0.0) (2016-03-17)
+
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/larryosborn/sandbox/compare/1.0.10...v3.0.0) (2016-03-17)
 
