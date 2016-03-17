@@ -78,6 +78,6 @@ increment = (importance, callback) ->
         cb
     )
 
-gulp.task 'patch', increment('patch')
-gulp.task 'feature', increment('feature')
-gulp.task 'release', increment('release')
+gulp.task 'patch', -> increment('patch')
+gulp.task 'feature', -> increment('feature')
+gulp.task 'release', -> increment('release')
