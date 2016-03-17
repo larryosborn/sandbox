@@ -43,12 +43,12 @@ gulp.task 'bump-version-patch', (importance) ->
 
 gulp.task 'bump-version-feature', (importance) ->
     gulp.src('./package.json')
-        .pipe(bump(type: 'feature').on('error', gutil.log))
+        .pipe(bump(type: 'minor').on('error', gutil.log))
         .pipe(gulp.dest('./'))
 
 gulp.task 'bump-version-release', (importance) ->
     gulp.src('./package.json')
-        .pipe(bump(type: 'release').on('error', gutil.log))
+        .pipe(bump(type: 'major').on('error', gutil.log))
         .pipe(gulp.dest('./'))
 
 gulp.task 'commit-changes', ->
