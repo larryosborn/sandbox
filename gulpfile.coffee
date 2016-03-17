@@ -69,6 +69,7 @@ increment = (importance, callback) ->
     cb = (error) ->
         console.log(error.message) if error
         callback(error)
+    console.log importance
     runSequence(
         'bump-version-' + importance,
         'changelog',
