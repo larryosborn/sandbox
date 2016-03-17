@@ -9,6 +9,7 @@ notify = require 'gulp-notify'
 rename = require 'gulp-rename'
 uglify = require 'gulp-uglify'
 runSequence = require 'run-sequence'
+fs = require 'fs'
 pkg = require './package.json'
 
 handleErrors = ->
